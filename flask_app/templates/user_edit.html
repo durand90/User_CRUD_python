@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit {{ user.fullname }}</h1>
+    <div>
+        <form action="/user/{{id}}/update" method="post">
+            <input type="hidden" name="id" id="id" value="{{ user.id }}">
+            <div>
+                <form action="/user/create" method="post"></form>
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first-name" value="{{ user.first_name }}">
+                </div>
+                <div>
+                    <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last-name" value="{{ user.last_name }}">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                <input type="text" name="email" id="email" value="{{ user.email }}">
+                </div>
+                <button>Update User</button>
+        </form>
+    </div>
+
+</body>
+</html>

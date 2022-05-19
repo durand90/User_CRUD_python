@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            ***************************
+            {% for use in table %}
+            <tr>
+                <td>{{ use.first_name }}</td>
+                <td>{{  use.last_name}}</td>
+                <td>{{ use.email }}</td>
+                <td><a href="/user/{{user.id}}/show">Show</a></td>
+                    <a href="/user/{{user.id}}/edit">Edit</a>
+                    <a href="/user/{{user.id}}/delete"Delete></a>
+            </tr>
+            {% endfor %}
+            &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+        </tbody>
+        <p><a href="/user/create">Add a New User</a></p>
+
+    </table>
+</body>
+</html>
